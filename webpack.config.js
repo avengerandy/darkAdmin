@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const package = require("./package.json");
 const { lstatSync, readdirSync } = require('fs');
 const { join } = require('path');
@@ -32,7 +33,7 @@ ownLib.forEach(element => {
 
 module.exports = {
     mode: "production",  //set production when release, development when debug
-    watch: true,
+    //watch: true,
     optimization: {
         splitChunks: {
             cacheGroups: cacheGroupsObject
@@ -72,6 +73,13 @@ module.exports = {
             template: "./src/index.html",
             filename: "./index.html", //default start at dist root 
             chunks: [...dependencies, ...["app"]]
-        })
+        }),
+        new CopyWebpackPlugin([
+            {
+              from: './src/images/',
+              to: './images/[name].[ext]',
+              toType: 'template'
+            }
+        ])
     ]
 }
