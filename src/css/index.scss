@@ -1,0 +1,92 @@
+@media screen and (max-width: 769px) {
+    .leftBar {
+        position: fixed;
+        right: 100%;
+        z-index: 9;
+        -moz-transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+    }
+    .leftBarOpen {
+        right: 0px;
+        -moz-transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+    }
+}
+
+.leftBar {
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #32383e;
+    .leftBarHeader{
+        height: 13.7rem;
+        display: flex;
+        border-bottom: 1px solid rgba(0,0,0,0.6);
+        justify-content: center;
+        flex-direction: column;
+        .leftBarImg{
+            clip-path: circle(45% at 50% 50%);
+            width: 65%;
+        }
+    }
+    .leftBarList{
+        height: calc(100vh - 13.7rem); 
+        overflow-y: scroll;
+        .list-group-item-action {
+            width: calc(100% - 11px);
+            border-radius: 0.25rem;
+            border: none;
+        }
+    }
+    .nav-icon {
+        position: absolute;
+        top: 0;
+        right: -70px;
+        background-color: #32383e;
+        padding: 1em;
+        width: 70px;
+        z-index: 9;
+    }
+    
+    .nav-icon:after, 
+    .nav-icon:before, 
+    .nav-icon div {
+        background-color: #fff;
+        -o-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        content: '';
+        display: block;
+        height: 5px;
+        margin: 7px 0;
+        -moz-transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+    }
+    .nav-icon-x{
+        right: 0px;
+        -moz-transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+    }
+    .nav-icon-x:before {
+        transform: translateY(12px) rotate(135deg);
+        -moz-transform: translateY(12px) rotate(135deg);
+        -webkit-transform: translateY(12px) rotate(135deg);
+    }
+
+    .nav-icon-x:after {
+        transform: translateY(-12px) rotate(-135deg);
+        -moz-transform: translateY(-12px) rotate(-135deg);
+        -webkit-transform: translateY(-12px) rotate(-135deg);
+    }
+      
+    .nav-icon-x div {
+        -moz-transform: scale(0);
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
