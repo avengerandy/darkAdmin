@@ -33,7 +33,7 @@ ownLib.forEach(element => {
 
 module.exports = {
     mode: "production",  //set production when release, development when debug
-    //watch: true,
+    watch: true,
     optimization: {
         splitChunks: {
             cacheGroups: cacheGroupsObject

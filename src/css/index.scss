@@ -1,4 +1,4 @@
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
     .leftBar {
         position: fixed;
         right: 100%;
@@ -6,6 +6,13 @@
         -moz-transition: all .2s ease-in-out;
         -webkit-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out;
+        .leftBarHeader{
+            .leftBarImg {
+                clip-path: circle(45% at 50% 50%);
+                height: 100%;
+                width: auto !important;
+            }
+        }
     }
     .leftBarOpen {
         right: 0px;
