@@ -4,7 +4,7 @@ import * as JQuery from "jquery";
 const $ = JQuery.default;
 import '../css/bootstrapSlateTheme.min.css';
 import 'simplebar'; // or "import SimpleBar from 'simplebar';" if you want to use it manually.
-import '../css/index.scss';
+import '../css/leftBar.scss';
 
 $(".nav-icon").click(function() {
     $(this).toggleClass('nav-icon-x');
