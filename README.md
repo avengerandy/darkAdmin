@@ -5,7 +5,7 @@
 
 pc
 <p align="center">
-  <img src = "https://github.com/avengerandy/darkAdmin/blob/master/Screenshot02.png" width="90%"/>
+  <img src = "https://github.com/avengerandy/darkAdmin/blob/master/Screenshot02 .png" width="90%"/>
 </p>
 
 phone
