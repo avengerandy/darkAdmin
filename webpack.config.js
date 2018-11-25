@@ -74,6 +74,12 @@ module.exports = {
             filename: "./index.html", //default start at dist root 
             chunks: [...dependencies, ...["app"]]
         }),
+        new HtmlWebpackPlugin({
+            hash: true,
+            template: "./src/cht.html",
+            filename: "./cht.html", //default start at dist root 
+            chunks: [...dependencies, ...["app"]]
+        }),
         new CopyWebpackPlugin([
             {
               from: './src/images/',
