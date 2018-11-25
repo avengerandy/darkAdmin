@@ -43,63 +43,28 @@
           </div>
         </div>
         <div class="col-sm" style="padding-top: 3rem; height: 100vh; overflow-y: scroll;">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-sm-12 col-md-8">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="text-center">Create</h2><hr style="border-top: 3px solid #fff;">
-                  </div>
+          <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-12 col-lg-8">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h2 class="text-center">Canvas</h2><hr style="border-top: 3px solid #fff;">
                 </div>
-                <form>
-                  <div class="form-group row">
-                    <label for="staticName" class="col-sm-2 col-form-label">Name</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="staticName" value="Name">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="staticEmail" value="email@example.com">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                    <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlSelect2">Example multiple select</label>
-                    <select multiple class="form-control" id="exampleFormControlSelect2">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                  </div>
-                  <div class="form-group row ">
-                    <div class="col-sm-12">
-                      <button type="submit" class="btn btn-primary float-right">Submit</button>
-                    </div>
-                  </div>
-                </form>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <Canvas class="chtCanvas"></Canvas>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary prev">◀</button>
+                </div>
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary bgChange">●</button>
+                </div>
+                <div class="col text-center">
+                  <button type="button" class="btn btn-primary next">▶</button>
+                </div>
               </div>
             </div>
           </div>

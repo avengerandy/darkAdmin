@@ -33,7 +33,7 @@ ownLib.forEach(element => {
 
 module.exports = {
     mode: "production",  //set production when release, development when debug
-    watch: false,
+    watch: true,
     optimization: {
         splitChunks: {
             cacheGroups: cacheGroupsObject
@@ -43,7 +43,8 @@ module.exports = {
         extensions: [".js"]
     },
     entry: {
-        app: "./src/scripts/app.js"
+        leftBar: "./src/scripts/leftBar.js",
+        canvasAnim: "./src/scripts/canvasAnim.js"
     },
     output: {
         filename: "./js/[name].bundle.js" //default start at dist root 
@@ -72,13 +73,13 @@ module.exports = {
             hash: true,
             template: "./src/index.html",
             filename: "./index.html", //default start at dist root 
-            chunks: [...dependencies, ...["app"]]
+            chunks: [...dependencies, ...["leftBar"]]
         }),
         new HtmlWebpackPlugin({
             hash: true,
             template: "./src/cht.html",
-            filename: "./cht.html", //default start at dist root 
-            chunks: [...dependencies, ...["app"]]
+            filename: "./cht.html",
+            chunks: [...dependencies, ...["leftBar", "canvasAnim"]]
         }),
         new CopyWebpackPlugin([
             {
