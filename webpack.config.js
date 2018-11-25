@@ -81,6 +81,12 @@ module.exports = {
             filename: "./cht.html",
             chunks: [...dependencies, ...["leftBar", "canvasAnim"]]
         }),
+        new HtmlWebpackPlugin({
+            hash: true,
+            template: "./src/xml.html",
+            filename: "./xml.html",
+            chunks: [...dependencies, ...["leftBar"]]
+        }),
         new CopyWebpackPlugin([
             {
               from: './src/images/',
