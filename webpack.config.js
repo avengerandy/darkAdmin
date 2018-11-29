@@ -33,7 +33,7 @@ ownLib.forEach(element => {
 
 module.exports = {
     mode: "production",  //set production when release, development when debug
-    watch: false,
+    watch: true,
     optimization: {
         splitChunks: {
             cacheGroups: cacheGroupsObject
@@ -85,6 +85,12 @@ module.exports = {
             hash: true,
             template: "./src/xml.html",
             filename: "./xml.html",
+            chunks: [...dependencies, ...["leftBar"]]
+        }),
+        new HtmlWebpackPlugin({
+            hash: true,
+            template: "./src/youtube.html",
+            filename: "./youtube.html",
             chunks: [...dependencies, ...["leftBar"]]
         }),
         new CopyWebpackPlugin([
